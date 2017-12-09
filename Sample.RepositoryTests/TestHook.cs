@@ -12,6 +12,7 @@ namespace Sample.RepositoryTests
         [AssemblyInitialize]
         public static void AssemblyInitialize(TestContext context)
         {
+            var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
             // Create SampleDB
             var sampleDbDatabase = new TestDbUtilities(DatabaseName.SampleDB);
             if (sampleDbDatabase.IsLocalDbExists())
