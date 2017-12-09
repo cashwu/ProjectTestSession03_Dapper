@@ -90,6 +90,7 @@
     <Compile Include="Misc\TestDbUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolInfoRepositoryTests.cs" />
+    <Compile Include="TestHook.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sample.Repository\Sample.Repository.csproj">
@@ -102,8 +103,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DbScripts\SampleDB_SchoolInfo_Create.sql" />
-    <Content Include="DbScripts\SampleDB_SchoolInfo_Data.sql" />
+    <Content Include="TestData\SampleDB_SchoolInfo_Create.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\SampleDB_SchoolInfo_Data.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
